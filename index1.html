@@ -9,22 +9,29 @@
     <script src="/js/lib/angular.min.js"></script>
 </head>
 <body>
-    <h1>{{ "Hola mundo con AngularJS" }}</h1>
-    <br>
-    <section>
-            <h1>Filtros en AngularJS</h1>
-            <h4>{{"Jorge"}}</h4>
-            <h4>{{"Jorge" | lowercase}}</h4>
-            <h4>{{"Jorge" | uppercase}}</h4>
-    </section>
-    <section>
-            <h1>Filtros de moneda</h1>
-            <h4>{{456798}}</h4>
-            <h4>{{456798 | currency}}</h4>
-            <h4>{{456798 | currency: 'MX'}}</h4>
-            <h4>{{456735416598 | number}}</h4>
-    </section>
+    <h1>Data binding</h1>
 
+    <div class="container">
+        Nombre: {{ nombre }}
+        <input type="text" class="form-control" ng-model="nombre">
+        <br>
+        Estado: {{ estado }}
+        <select class="form-control" ng-model="estado">
+            <option value="1">Ags</option>
+            <option value="2">Zacatecas</option>
+            <option value="3">Durango</option>
+        </select>
+        <br>
+        Escoge una opcion:{{ opt1 }} {{ opt2 }}
+        <br>
+        <input type="checkbox" ng-model="opt1" >opcion1
+        <input type="checkbox" ng-model="opt2" >opcion2
+        <br><br>
+        Escoge el genero: {{ genero }}
+        <br>
+        <input type="radio" ng-model="genero" value="Hombre">Hombre
+        <input type="radio" ng-model="genero" value="Mujer">Mujer
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>    
